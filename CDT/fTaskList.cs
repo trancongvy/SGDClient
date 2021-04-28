@@ -15,7 +15,7 @@ using CDTDatabase;
 using System.Collections;
 using System.Text.RegularExpressions;
 using System.Threading;
-namespace CDT
+namespace CDTClient
 {
 
 

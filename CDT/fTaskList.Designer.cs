@@ -1,4 +1,4 @@
-﻿namespace CDT
+﻿namespace CDTClient
 {
     partial class fTaskList
     {
@@ -93,7 +93,7 @@
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Image = global::CDT.Properties.Resources.Clock;
+            this.simpleButton1.Image = global::CDTClient.Properties.Resources.Clock;
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.simpleButton1.Location = new System.Drawing.Point(73, 0);
             this.simpleButton1.Name = "simpleButton1";

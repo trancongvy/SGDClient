@@ -8,7 +8,7 @@ using CDTLib;
 using System.IO;
 using CDTControl;
 using CDTDatabase;
-namespace CDT
+namespace CDTClient
 {
    public partial class DataStruct
     {
