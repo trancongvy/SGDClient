@@ -79,7 +79,7 @@ namespace CDTSystem
         {
             fTextResult f = new fTextResult("Gõ tên dữ liệu mới, không trùng với dữ liệu hiện có");
             DialogResult da = f.ShowDialog();
-            string CompanyName = "CBA" +  f.result;
+            string CompanyName =  f.result;
             if (da == DialogResult.OK && f.result != string.Empty && !SoftList.Contains(CompanyName))
             {
                 SimpleButton tb = new SimpleButton();
@@ -110,6 +110,7 @@ namespace CDTSystem
                 key.SetValue("UserName", "Admin", RegistryValueKind.String);
                 key.SetValue("isRemote", "False", RegistryValueKind.String);
                 key.SetValue("SoftType", "0", RegistryValueKind.DWord);
+                //Copy Plugins
             }
             
         }

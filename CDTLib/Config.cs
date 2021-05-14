@@ -9,7 +9,7 @@ namespace CDTLib
     public class Config
     {
         static Hashtable _variables = new Hashtable();
-
+        public static Info info;
         public static Hashtable Variables
         {
             get { return Config._variables; }
@@ -44,6 +44,11 @@ namespace CDTLib
         {
             return (_variables[key]);
         }
+        public static Info GetInfo()
+        {
+            info.config = _variables;
+            return info;
+        }
     }
     public partial class UserConnection
     {
@@ -62,5 +67,31 @@ namespace CDTLib
         public string StructDB { get; set; }
         public string LicenceKey { get; set; }
         public int stt { get; set; }
+    }
+    public partial class ServerAPI
+    {
+        public string DatabaseName { get; set; }
+        public string StructDB { get; set; }
+        public int stt { get; set; }
+        public string ApiUrl { get; set; }
+    }
+    public class Info
+    {
+
+        public string Token { get; set; }
+        public string ComputerName { get; set; }
+        public string StructCon { get; set; }
+        public string DataCon { get; set; }
+        public string DataName { get; set; }
+        public string StructName { get; set; }
+        public DateTime ExDatetime { get; set; }
+        public string UserID;
+        public string UserGroupID;
+        public bool isAdmin;
+        public Hashtable config;
+        public void JustConnected()
+        {
+            ExDatetime = DateTime.Now.AddMinutes(5);
+        }
     }
 }
